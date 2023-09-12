@@ -2,10 +2,10 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: # the website title (if blank, full name will be used instead)
-first_name: Jizhou (Colin) 济舟
+title: blank # the website title (if blank, full name will be used instead)
+first_name: Jizhou (Colin)
 middle_name: 
-last_name: Tang 唐
+last_name: Tang
 email: jizhoutang@outlook.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
@@ -75,7 +75,7 @@ github_username: CTlandu # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username: # your Twitter handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-linkedin_username: Jizhou Tang # your LinkedIn user name
+linkedin_username: jizhou-tang-983771180 # your LinkedIn user name
 telegram_username: # your Telegram user name
 scholar_userid: # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
