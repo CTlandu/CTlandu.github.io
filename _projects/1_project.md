@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
+title: Project McDonald's
+description: Shots of my always-go McDonald's at home - Shenzhen, China
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: Photography
 related_publications: einstein1956investigations, einstein1950meaning
 ---
 

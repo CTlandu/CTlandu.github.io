@@ -1,11 +1,11 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
-description: A growing collection of your cool projects.
+title: Phtography
+permalink: /photography/
+description: A collection of some of my photography & video making works
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+display_categories: [Photography, fun]
 horizontal: false
 ---
 
