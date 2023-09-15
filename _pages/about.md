@@ -26,7 +26,7 @@ This website serves to show my academic/career/photography progress and works.
 For photography and video making works, please click the submenu [Photography](/photography)
 
 Fun fact of me: 
-I share the same last name with my mom, not my dad.
+I share the same last name with my mom.
 
 I withdrew from William & Mary in 2020 due to the Covid situation and attended a non-degree program at [The Chinese University of Hong Kong, Shenzhen (CUHKSZ)](https://www.cuhk.edu.cn/en). During the 2-year study at CUHKSZ, I continue studying Computer Science, and exploring other opportunities such as being a video creator, photographer, or peer mental counselor. Those were valuable experiences to me.
 
