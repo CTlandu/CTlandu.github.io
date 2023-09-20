@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Project Contrast
+description: a project with photos highlighting some kinds of contrast I see as a photographer
+img: assets/img/Contrast/1.jpg
 importance: 2
-category: work
+category: Photography
 giscus_comments: true
 ---
 

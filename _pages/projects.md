@@ -2,7 +2,7 @@
 layout: page
 title: Phtography
 permalink: /photography/
-description: A collection of some of my photography & video making works
+description: A collection of some of my photography & video works
 nav: true
 nav_order: 2
 display_categories: [Photography, fun]
