@@ -2,7 +2,7 @@
 layout: page
 title: "CONTRAST"
 description: A collection of photos showing contrast of light, shadow, nature, age, emotion...
-img: assets/img/Contrast/1.jpg
+img: assets/img/Contrast/1.JPG
 importance: 2
 category: Photography
 giscus_comments: false
@@ -11,7 +11,7 @@ giscus_comments: false
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      {% include figure.html path="assets/img/Contrast/1.jpg" title="Bicycle Boy" class="img-fluid rounded z-depth-1" %}
+      {% include figure.html path="assets/img/Contrast/1.JPG" title="Bicycle Boy" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="carousel-item">
       {% include figure.html path="assets/img/Contrast/3.jpg" title="Cut-in Light" class="img-fluid rounded z-depth-1" %}
@@ -20,10 +20,10 @@ giscus_comments: false
       {% include figure.html path="assets/img/Contrast/5.jpg" title="Sunset Wedding" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="carousel-item">
-      {% include figure.html path="assets/img/Contrast/6.jpg" title="Domino Park" class="img-fluid rounded z-depth-1" %}
+      {% include figure.html path="assets/img/Contrast/6.JPG" title="Domino Park" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="carousel-item">
-      {% include figure.html path="assets/img/Contrast/2.jpg" title="Bicycle Guy" class="img-fluid rounded z-depth-1" %}
+      {% include figure.html path="assets/img/Contrast/2.JPG" title="Bicycle Guy" class="img-fluid rounded z-depth-1" %}
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
