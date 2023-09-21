@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Project McDonald's
-description: Shots of my always-go McDonald's at home - Shenzhen, China
+description: Shots of my go-to McDonald's at home
 img: assets/img/McDonald's/1.jpg
 importance: 1
 category: Photography
