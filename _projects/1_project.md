@@ -21,9 +21,6 @@ The basic idea comes from the first photo, which is the Mcdonald's in my neighbo
     The Mcdonald's in my neighborhood. The playground in front of it is the kids' favorite hang-out place.
 </div>
 
-<!-- You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images. -->
 The layouts and decorations of McDonald’s have changed so much since it decided to rebrand and redesign the style. I remembered the style inside was like, warm natural light, warm yellow floor and fixed white round chairs. However for now, every McDonald’s I visited became new dark gold style.
 I could barely find any old-style McDonald’s photos and it’s such a pity because I think it’s a common memory for so many people in my generation.
 
