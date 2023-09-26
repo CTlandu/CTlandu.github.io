@@ -1,3 +1,13 @@
+<style>
+  .vertical-image{
+    max-height: 100%; /* Set the maximum height to 100% of the parent container's height */
+    max-width: 100%;  /* Set the maximum width to 100% of the parent container's width */
+    width: auto;      /* Let the browser calculate the width while maintaining the aspect ratio */
+    height: auto;     /* Let the browser calculate the height while maintaining the aspect ratio */
+  }
+</style>
+
+
 {%- assign img_path = include.path | remove: ".jpg" | remove: ".jpeg" | remove: ".png" | remove: ".tiff" -%}
 
 <figure>

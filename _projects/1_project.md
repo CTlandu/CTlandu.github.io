@@ -3,7 +3,7 @@ layout: page
 title: Project McDonald's
 description: Shots of my go-to McDonald's at home
 img: assets/img/McDonald's/1.jpg
-importance: 1
+importance: 2
 category: Photography
 # related_publications: einstein1956investigations, einstein1950meaning
 
