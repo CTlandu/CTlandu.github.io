@@ -126,7 +126,7 @@ category: Photography
       {% include figure.html path="assets/img/portraits/sea/3.jpg" title="sea" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="carousel-item">
-      {% include figure.html path="assets/img/portraits/sea/1.jpg" title="sea" class="img-fluid rounded z-depth-1" width="45%" %}
+      {% include figure.html path="assets/img/portraits/sea/1.JPG" title="sea" class="img-fluid rounded z-depth-1" width="45%" %}
     </div>
     <div class="carousel-item">
       {% include figure.html path="assets/img/portraits/sea/5.jpg" title="sea" class="img-fluid rounded z-depth-1" width="45%" %}
@@ -135,7 +135,7 @@ category: Photography
       {% include figure.html path="assets/img/portraits/sea/4.jpg" title="sea" class="img-fluid rounded z-depth-1" width="45%" %}
     </div>
      <div class="carousel-item">
-      {% include figure.html path="assets/img/portraits/sea/2.jpg" title="sea" class="img-fluid rounded z-depth-1" width="45%" %}
+      {% include figure.html path="assets/img/portraits/sea/2.JPG" title="sea" class="img-fluid rounded z-depth-1" width="45%" %}
     </div>
   </div>
   <a class="carousel-control-prev" href="#carousel4" role="button" data-slide="prev">
