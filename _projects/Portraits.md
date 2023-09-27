@@ -39,8 +39,10 @@ category: Photography
   </a>
 </div>
 <div class="caption">
-    "Thinking of Someone on a Typhoon Day" - Shot in August 2022
+    "Missing Her on a Typhoon Day" - Shot in August 2022
 </div>
+
+---
 
 
 <!-- 荒野 -->
@@ -78,8 +80,12 @@ category: Photography
   </a>
 </div>
 <div class="caption">
-    "Alone" - Shot in January 2023
+    "Sunset Loneliness" - Shot in January 2023
 </div>
+
+---
+
+
 
 <!-- 港风写真 -->
 <div id="carousel2" class="carousel slide" data-ride="carousel">
@@ -118,6 +124,7 @@ category: Photography
 <div class="caption">
     "Back to 1990s Hong Kong" - Shot in July 2022
 </div>
+---
 
 <!-- Rochelle学姐 海边 -->
 <div id="carousel4" class="carousel slide" data-ride="carousel">
@@ -150,6 +157,7 @@ category: Photography
 <div class="caption">
     "Tethys" - Shot in March 2023
 </div>
+---
 
 <!-- 姐妹花 -->
 <div id="carousel5" class="carousel slide" data-ride="carousel">
@@ -188,7 +196,7 @@ category: Photography
 <div class="caption">
     "Besties" - Shot in August 2022
 </div>
-
+---
 
 <!-- 天台2 -->
 <div id="carousel6" class="carousel slide" data-ride="carousel">
@@ -221,6 +229,7 @@ category: Photography
 <div class="caption">
     Hang out at the rooftop - Shot in March 2022
 </div>
+---
 
 <!-- hgc -->
 <div id="carousel7" class="carousel slide" data-ride="carousel">
@@ -256,6 +265,7 @@ category: Photography
 <div class="caption">
     "The Funeral" - Shot in May 2022
 </div>
+---
 
 <!-- xyj -->
 <div id="carousel8" class="carousel slide" data-ride="carousel">
@@ -288,6 +298,7 @@ category: Photography
 <div class="caption">
     "Neighborhood Girl" - Shot in August 2023
 </div>
+---
 
 <!-- xyj1 -->
 <div id="carousel9" class="carousel slide" data-ride="carousel">
@@ -320,6 +331,7 @@ category: Photography
 <div class="caption">
     "City Girl" - Shot in February 2022
 </div>
+---
 
 <!-- zjw -->
 <div id="carousel10" class="carousel slide" data-ride="carousel">
@@ -352,6 +364,7 @@ category: Photography
 <div class="caption">
     "CUHKSZ Student Mentality" - Shot in May 2022
 </div>
+---
 
 <!-- sisi -->
 <div id="carousel11" class="carousel slide" data-ride="carousel">

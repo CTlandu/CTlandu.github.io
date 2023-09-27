@@ -5,7 +5,7 @@ permalink: /photography/
 description: A collection of some of my photography & video works
 nav: true
 nav_order: 2
-display_categories: [Photography, fun]
+display_categories: [Photography]
 horizontal: false
 ---
 
