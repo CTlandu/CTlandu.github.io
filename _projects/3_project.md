@@ -8,7 +8,7 @@ category: Photography
 ---
 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox" style="height: 500px; width: auto !important;">
+  <div class="carousel-inner" role="listbox" style="height: auto; width: auto !important;">
     <div class="carousel-item active">
       {% include figure.html path="assets/img/portraits/rooftop/2.jpg" title="rooftop" class="img-fluid rounded z-depth-1" %}
     </div>
@@ -45,7 +45,7 @@ category: Photography
 
 <!-- 荒野 -->
 <div id="carousel3" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox" style="height: 500px; width: auto !important;">
+  <div class="carousel-inner" role="listbox" style="height: auto; width: auto !important;">
     <div class="carousel-item active">
       {% include figure.html path="assets/img/portraits/ah/1.jpg" title="ah" class="img-fluid rounded z-depth-1" %}
     </div>
@@ -83,7 +83,7 @@ category: Photography
 
 <!-- 港风写真 -->
 <div id="carousel2" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox" style="height: 500px; width: auto !important;">
+  <div class="carousel-inner" role="listbox" style="height: auto; width: auto !important;">
     <div class="carousel-item active">
       {% include figure.html path="assets/img/portraits/HK/1.jpg" title="hk" class="img-fluid rounded z-depth-1" width="45%" %}
     </div>
@@ -121,7 +121,7 @@ category: Photography
 
 <!-- Rochelle学姐 海边 -->
 <div id="carousel4" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox" style="height: 500px; width: auto !important;">
+  <div class="carousel-inner" role="listbox" style="height: auto; width: auto !important;">
     <div class="carousel-item active">
       {% include figure.html path="assets/img/portraits/sea/3.jpg" title="sea" class="img-fluid rounded z-depth-1" %}
     </div>
@@ -153,7 +153,7 @@ category: Photography
 
 <!-- 姐妹花 -->
 <div id="carousel5" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox" style="height: 500px; width: auto !important;">
+  <div class="carousel-inner" role="listbox" style="height: auto; width: auto !important;">
     <div class="carousel-item active">
       {% include figure.html path="assets/img/portraits/sis/2.jpg" title="sis" class="img-fluid rounded z-depth-1" %}
     </div>
@@ -192,7 +192,7 @@ category: Photography
 
 <!-- 天台2 -->
 <div id="carousel6" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox" style="height: 500px; width: auto !important;">
+  <div class="carousel-inner" role="listbox" style="height: auto; width: auto !important;">
     <div class="carousel-item active">
       {% include figure.html path="assets/img/portraits/rooftop1/3.jpg" title="rooftop1" class="img-fluid rounded z-depth-1" %}
     </div>
@@ -224,7 +224,7 @@ category: Photography
 
 <!-- hgc -->
 <div id="carousel7" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox" style="height: 500px; width: auto !important;">
+  <div class="carousel-inner" role="listbox" style="height: auto; width: auto !important;">
     <div class="carousel-item active">
       {% include figure.html path="assets/img/portraits/hgc/1.jpg" title="hgc" class="img-fluid rounded z-depth-1" width="45%" %}
     </div>
@@ -259,7 +259,7 @@ category: Photography
 
 <!-- xyj -->
 <div id="carousel8" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox" style="height: 500px; width: auto !important;">
+  <div class="carousel-inner" role="listbox" style="height: auto; width: auto !important;">
     <div class="carousel-item active">
       {% include figure.html path="assets/img/portraits/xyj/1.jpg" title="xyj" class="img-fluid rounded z-depth-1" width="45%" %}
     </div>
@@ -291,7 +291,7 @@ category: Photography
 
 <!-- xyj1 -->
 <div id="carousel9" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox" style="height: 500px; width: auto !important;">
+  <div class="carousel-inner" role="listbox" style="height: auto; width: auto !important;">
     <div class="carousel-item active">
       {% include figure.html path="assets/img/portraits/xyj1/5.jpg" title="xyj1" class="img-fluid rounded z-depth-1" width="45%" %}
     </div>
@@ -323,7 +323,7 @@ category: Photography
 
 <!-- zjw -->
 <div id="carousel10" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox" style="height: 500px; width: auto !important;">
+  <div class="carousel-inner" role="listbox" style="height: auto; width: auto !important;">
     <div class="carousel-item active">
       {% include figure.html path="assets/img/portraits/zjw/2.jpg" title="zjw" class="img-fluid rounded z-depth-1" width="45%" %}
     </div>
@@ -355,7 +355,7 @@ category: Photography
 
 <!-- sisi -->
 <div id="carousel11" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox" style="height: 500px; width: auto !important;">
+  <div class="carousel-inner" role="listbox" style="height: auto; width: auto !important;">
     <div class="carousel-item active">
       {% include figure.html path="assets/img/portraits/sisi/1.jpg" title="sisi" class="img-fluid rounded z-depth-1" %}
     </div>
