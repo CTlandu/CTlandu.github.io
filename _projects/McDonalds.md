@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Project McDonald's
+title: McDonald's
 description: Shots of my go-to McDonald's at home
 img: assets/img/McDonald's/1.jpg
 importance: 2
