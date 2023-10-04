@@ -39,7 +39,7 @@ category: Photography
   </a>
 </div>
 <div class="caption">
-    "Missing Her on a Typhoon Day" - Shot in August 2022
+    "Missing Someone on a Typhoon Day" - Shot in August 2022
 </div>
 
 ---
@@ -362,7 +362,7 @@ category: Photography
   </a>
 </div>
 <div class="caption">
-    "CUHKSZ Student Mentality" - Shot in May 2022
+    "Homework MAKE Depression" - Shot in May 2022
 </div>
 ---
 
