@@ -8,14 +8,14 @@ middle_name:
 last_name: Tang
 email: jizhoutang@outlook.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Jizhou (Colin) Tang's Personal Website, showing academic, professional, and personal work.
+  Colin Tang,Jizhou Tang,Tang Jizhou
 # footer_text: >
 #   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 #   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: Colin Tang, Jizhou Tang, Tang Jizhou # add your own keywords or leave empty
+keywords: Colin,Jizhou,CTlandu,Tang # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: 📷  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://CTlandu.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
@@ -106,7 +106,7 @@ discord_id: # your discord id (18-digit unique numerical identifier)
 zotero_username: # your zotero username
 
 contact_note: >
-  Please always feel to reach out for inquiring & collab. I check email and instagram regularly.
+  Please always feel free to reach out for inquiring & collab. I check email and instagram regularly.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
