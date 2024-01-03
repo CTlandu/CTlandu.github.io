@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Portraits
-description: Selected from my portrait photography work
+description: Selected from my portrait photography works
 img: assets/img/portraits/rooftop/2.jpg
-importance: 1
+importance: 2
 category: Photography
 ---
 

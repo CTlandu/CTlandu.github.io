@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Phtography
+title: Photography
 permalink: /photography/
 description: A collection of some of my photography & video works
 nav: true

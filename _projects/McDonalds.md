@@ -1,9 +1,9 @@
 ---
 layout: page
 title: McDonald's
-description: Shots of my go-to McDonald's at home
+description: Shots of my frequent go-to McDonald's at home
 img: assets/img/McDonald's/1.jpg
-importance: 2
+importance: 3
 category: Photography
 # related_publications: einstein1956investigations, einstein1950meaning
 

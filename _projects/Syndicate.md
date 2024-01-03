@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Hiphop Photoshoot
+title: PHOTOSHOOT
 description: For Syndicate Hiphop Dance team members at W&M.
-img: assets/img/syndicate/15.jpg
+img: assets/img/syndicate/thumbnail.jpg
 importance: 1
 category: Photography
 # related_publications: einstein1956investigations, einstein1950meaning

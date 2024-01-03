@@ -1,9 +1,9 @@
 ---
 layout: page
 title: "CONTRAST"
-description: A collection of photos showing contrast of light, shadow, nature, age, emotion...
+description: Collection of photos showing contrast of many kinds.
 img: assets/img/Contrast/1.JPG
-importance: 3
+importance: 4
 category: Photography
 giscus_comments: false
 ---
