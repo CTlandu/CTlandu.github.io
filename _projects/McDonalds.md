@@ -8,6 +8,8 @@ category: Photography
 # related_publications: einstein1956investigations, einstein1950meaning
 
 ---
+2023 -- 
+
 First self-assigned project inspired by [@willemverb](https://www.youtube.com/watch?v=L-G2hRUz6vg) 
 
 The basic idea comes from the first photo, which is the Mcdonald's in my neighborhood and it has been open since my childhood. It always was the place that every kid in my neighborhood would like to hold his birthday party at and there were so many great memories there...

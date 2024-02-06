@@ -7,6 +7,7 @@ importance: 4
 category: Photography
 giscus_comments: false
 ---
+2022 -- 
 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">

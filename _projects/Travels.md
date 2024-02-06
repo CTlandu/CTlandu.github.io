@@ -6,6 +6,7 @@ img: assets/img/Travel/6.JPG
 importance: 5
 category: Photography
 ---
+2022 -- 
 
 <div class="row">
     <div class="col-sm-0 mt-3 mt-md-0 mx-auto">

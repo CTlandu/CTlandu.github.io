@@ -6,6 +6,7 @@ img: assets/img/portraits/rooftop/2.jpg
 importance: 2
 category: Photography
 ---
+2022 -- 
 
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox" style="height: auto; width: auto !important;">

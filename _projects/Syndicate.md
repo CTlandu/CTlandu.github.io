@@ -8,6 +8,8 @@ category: Photography
 # related_publications: einstein1956investigations, einstein1950meaning
 
 ---
+2023/10
+
 Photoshoot Project of Syndicate Hiphop Dance team members [@syndicate](https://www.instagram.com/syndicate_wm/) for their Fall 2023 "Syndi-Cinema" showcase. They are one of the best dancing clubs at William & Mary 💃💃. It was my first time taking photos of this many people at the same time and it was my great honor to shoot for these amazing dancers😉
 
 <div class="row">
