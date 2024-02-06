@@ -2,7 +2,7 @@
 layout: page
 title: W&M in Black & White Films
 description: Shots of College of William & Mary in black and white instant film.
-img: assets/img/W&M/wren-b.jpg
+img: assets/img/W&M/wren-b.JPG
 importance: 2
 category: Videos
 ---
