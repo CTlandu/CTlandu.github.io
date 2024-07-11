@@ -27,7 +27,7 @@ This website serves to show my academic & career & photography progress and work
 
 For Photography Works: See [Photography](/photography) or  my [Instagram Page](https://www.instagram.com/ctphotography77/)
 
-Here is my <a href="/assets/pdf/Colin_Tang_Resume_2024.7.10.pdf" target="_blank">resume</a> for academics and works.
+Here is my <a href="/assets/pdf/Colin_Tang_Resume_2024.7.11.pdf" target="_blank">Resume [pdf]</a><a href="/assets/pdf/Colin_Tang_Resume_2024.7.11.docx" target="_blank">[docx]</a> for academics and works.
 
 Fun fact of me: 
 I share the same last name with my mom.
