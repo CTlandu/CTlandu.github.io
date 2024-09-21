@@ -5,9 +5,12 @@ permalink: /photography/
 description: A collection of some of my photography & video works
 nav: true
 nav_order: 2
-display_categories: [Photography,Videos]
+display_categories: [Photography, Videos]
 horizontal: false
 ---
+
+<!-- Adding the award announcement at the top of the page -->
+<h3>🎉 Recent photography award: <a href="https://www.instagram.com/p/C_twhg3oUM2/?igsh=MWt5MjVlMmJlbmZuNA==">Winner of AAP Magazine 41 B&W</a></h3>
 
 <!-- pages/projects.md -->
 <div class="projects">
@@ -36,10 +39,15 @@ horizontal: false
   {% endfor %}
 
 {%- else -%}
+
 <!-- Display projects without categories -->
-  {%- assign sorted_projects = site.projects | sort: "importance" -%}
+
+{%- assign sorted_projects = site.projects | sort: "importance" -%}
+
   <!-- Generate cards for each project -->
-  {% if page.horizontal -%}
+
+{% if page.horizontal -%}
+
   <div class="container">
     <div class="row row-cols-2">
     {%- for project in sorted_projects -%}
