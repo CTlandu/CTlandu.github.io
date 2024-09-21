@@ -4,8 +4,9 @@ permalink: /publications/
 title: Publications
 description: I don't have any publication yet. But there are two research projects I'm currently working on, which may turn into a publication later.
 nav: true
-nav_order: 1
+nav_order: 2
 ---
+
 <!-- _pages/publications.md -->
 
 <div class="publications">
