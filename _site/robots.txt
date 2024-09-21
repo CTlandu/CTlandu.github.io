@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://CTlandu.github.io/sitemap.xml
