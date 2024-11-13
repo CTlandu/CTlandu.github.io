@@ -17,6 +17,24 @@
   github: https://github.com/CTlandu/PhotoBuddy
   image: /assets/github_projects/photobuddies_thumbnail.png
 
+- name: TLDR Newsletter (Chinese)
+  description: A bilingual tech news platform that translates TLDR Tech Newsletter into Chinese, featuring automated WeChat article publishing and dual-language content.
+  technologies:
+    [
+      Vue.js,
+      Vite,
+      TailwindCSS,
+      DaisyUI,
+      Flask,
+      MongoDB,
+      DeepL API,
+      BeautifulSoup4,
+      Git,
+    ]
+  url: https://www.tldrnewsletter.cn
+  github: https://github.com/CTlandu/TLDR-Chinese
+  image: /assets/github_projects/tldrchinese_main.png
+
 - name: StreamSync
   description: A tool to manage and sync live streams from multiple sources.
   technologies:

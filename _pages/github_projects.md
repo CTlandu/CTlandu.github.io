@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Some of my passionate side hustles.
+description: indie hacking!
 nav: true
 nav_order: 1
 ---
