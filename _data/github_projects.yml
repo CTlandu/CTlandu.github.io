@@ -32,7 +32,7 @@
       Git,
     ]
   url: https://www.tldrnewsletter.cn
-  github: https://github.com/CTlandu/TLDR-Chinese
+  github: https://github.com/CTlandu/TLDR_Chinese
   image: /assets/github_projects/tldrchinese_main.png
 
 - name: StreamSync
