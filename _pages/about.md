@@ -21,11 +21,13 @@ social: true # includes social icons at the bottom of the page
 
 Hi, welcome to my personal website! I'm currently a Senior at the <a href='https://www.wm.edu/'>College of William & Mary</a> pursuing a B.S. in Computer Science and a minor in Arts & Art History.
 
-Please feel free to check out my <a href="/assets/pdf/Colin_Tang_NG_resume_10.23.pdf" target="_blank">Resume(pdf)</a>. I'm currently looking for a position in the field of Software Development. My [<i class="fab fa-linkedin"></i> Linkedin](https://www.linkedin.com/in/colin-tang-983771180/), and [<i class="fab fa-github"></i> Github](https://github.com/CTlandu)
+Please feel free to check out my <a href="/assets/pdf/Colin_Tang_NG_resume_1-17-2025.pdf" target="_blank">Resume(pdf)</a>. I'm currently looking for a position in the field of Software Development. My [<i class="fab fa-linkedin"></i> Linkedin](https://www.linkedin.com/in/colin-tang-983771180/), and [<i class="fab fa-github"></i> Github](https://github.com/CTlandu)
 
 ### <i class="fas fa-laptop-code"></i> Technical Experience
 
-Founder & Full Stack Developer @ [PhotoBuddies](https://www.photobuddies.org)
+Web Developer Intern @ Waveform.ai
+
+Founder & Full Stack Developer @ [PhotoBuddies](https://www.photobuddies.org), [TLDR Bilingual TechNews](https://tldrnewsletter.cn)
 
 Ex-Web Developer Intern @ [Virginia Department of General Services](https://dgs.virginia.gov/division-of-consolidated-laboratory-services)
 
