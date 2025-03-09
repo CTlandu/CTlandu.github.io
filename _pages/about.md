@@ -25,9 +25,9 @@ Please feel free to check out my <a href="/assets/pdf/Colin_Tang_NG_resume_1-17-
 
 ### <i class="fas fa-laptop-code"></i> Technical Experience
 
-Web Developer Intern @ Waveform.ai
+Web Development Lead @ [Waveform.ai](https://www.waveformai.wm.edu)
 
-Founder & Full Stack Developer @ [PhotoBuddies](https://www.photobuddies.org), [TLDR Bilingual TechNews](https://tldrnewsletter.cn)
+Founder & Full-Stack Developer @ [PhotoBuddies](https://www.photobuddies.org), [TLDR Bilingual TechNews](https://tldrnewsletter.cn)
 
 Ex-Web Developer Intern @ [Virginia Department of General Services](https://dgs.virginia.gov/division-of-consolidated-laboratory-services)
 
