@@ -1,0 +1,48 @@
+[
+  {
+    "id": "portraits",
+    "title": "Portraits",
+    "description": "Selected from my portrait photography works",
+    "category": "Photography",
+    "img": "/assets/img/portraits/rooftop/2.jpg",
+    "thumbnail": "/assets/img/portraits/rooftop/2.jpg",
+    "importance": 2
+  },
+  {
+    "id": "contrast",
+    "title": "Contrast",
+    "description": "Photography project showcasing contrasts",
+    "category": "Photography",
+    "img": "/assets/img/Contrast/1.jpg",
+    "thumbnail": "/assets/img/Contrast/1.jpg",
+    "importance": 1
+  },
+  {
+    "id": "travels",
+    "title": "Travels",
+    "description": "Travel photography collection",
+    "category": "Photography",
+    "img": "/assets/img/Travel/1.JPG",
+    "thumbnail": "/assets/img/Travel/1.JPG",
+    "importance": 3
+  },
+  {
+    "id": "w&m_vid",
+    "title": "W&M Video",
+    "description": "Video project for William & Mary",
+    "category": "Videos",
+    "img": "/assets/img/W&M/1.JPG",
+    "thumbnail": "/assets/img/W&M/1.JPG",
+    "importance": 2
+  },
+  {
+    "id": "outerbanks_vid",
+    "title": "Outer Banks Video",
+    "description": "Video project from Outer Banks",
+    "category": "Videos",
+    "img": "/assets/img/OBX/1.jpg",
+    "thumbnail": "/assets/img/OBX/1.jpg",
+    "importance": 1
+  }
+]
+

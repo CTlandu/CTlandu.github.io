@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // GitHub Pages 路由重定向
+      // 单页应用 (SPA) 需要将所有路由重定向到 index.html
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
+      
+      // 如果路径不是根路径，重定向到 index.html
+      if (path !== '/' && !path.startsWith('/assets/')) {
+        window.location.replace('/index.html' + path + search + hash);
+      } else {
+        window.location.replace('/index.html' + search + hash);
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
+
