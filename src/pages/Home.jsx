@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Mail, Phone, Instagram, Linkedin, Github, ExternalLink } from 'lucide-react'
 // 图片应该放在 public 目录下，直接使用路径引用
-const profilePic = '/assets/img/prof_pic.png'
+const profilePic = '/assets/img/prof_pic_2.jpg'
 
 export default function Home() {
   return (
@@ -22,7 +22,7 @@ export default function Home() {
             >
               College of William & Mary
             </a>{' '}
-            , specializing in {' '}
+            with full scholarship and TA assistantship, specializing in {' '}
             <a 
               href="https://www.wm.edu/as/mathematics/graduate/cor/" 
               target="_blank" 
@@ -62,17 +62,17 @@ export default function Home() {
           </div>
 
           <p className="text-gray-600 dark:text-gray-400 mb-4">
-            I'm currently looking for a position in the field of Software Development.
+            I'm currently looking for a position in the field of Product Management or Software Development.
           </p>
         </div>
 
-        <div className="md:w-64 flex-shrink-0">
+        <div className="md:w-48 flex-shrink-0">
           <img
             src={profilePic}
             alt="Colin Tang"
-            className="rounded-lg shadow-lg w-full"
+            className="rounded-lg shadow-lg w-full max-h-64 object-cover"
           />
-          <div className="mt-4 space-y-2 text-sm">
+          <div className="mt-3 space-y-1.5 text-sm">
             <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
               <Phone size={16} />
               <span>757-332-3947</span>
@@ -98,27 +98,86 @@ export default function Home() {
         </div>
       </div>
 
+      {/* 项目展示 */}
+      <section>
+        <h2 className="text-3xl font-bold mb-6">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Fav-ly 项目 */}
+          <a
+            href="https://www.fav-ly.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer"
+          >
+            <div className="aspect-video bg-gray-100 dark:bg-gray-700 overflow-hidden">
+              <img
+                src="/assets/github_projects/favly_thumbnail.png"
+                alt="Fav-ly"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  e.target.style.display = 'none'
+                }}
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                Fav-ly
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
+                Let someone know you in one click - a perfect dating helper.
+              </p>
+              <div className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 text-sm font-medium">
+                View Project <ExternalLink size={14} />
+              </div>
+            </div>
+          </a>
+
+          {/* TLDR Bilingual 项目 */}
+          <a
+            href="https://tldrnewsletter.cn"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer"
+          >
+            <div className="aspect-video bg-gray-100 dark:bg-gray-700 overflow-hidden">
+              <img
+                src="/assets/github_projects/tldr_thumbnail.png"
+                alt="TLDR Bilingual TechNews"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  e.target.style.display = 'none'
+                }}
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                TLDR Bilingual Tech News
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
+                Delivering the latest tech news in both Chinese and English
+              </p>
+              <div className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 text-sm font-medium">
+                Visit Website <ExternalLink size={14} />
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
       {/* 技术经验 */}
       <section>
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-          <span className="text-2xl">💻</span> Technical Experience
+          <span className="text-2xl">💻</span> Internship Experience
         </h2>
         <div className="space-y-4">
           <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-            <h3 className="font-semibold text-lg mb-1">Web Development Lead</h3>
+            <h3 className="font-semibold text-lg mb-1">Ex-Software Development Intern</h3>
             <p className="text-gray-700 dark:text-gray-300">
-              @ <a href="https://www.waveformai.wm.edu" target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-primary-400 hover:underline">Waveform.ai</a>
+              @ <a href="https://waveformai.wm.edu/" target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-primary-400 hover:underline">Waveform.ai</a>
             </p>
           </div>
           <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-            <h3 className="font-semibold text-lg mb-1">Founder & Full-Stack Developer</h3>
-            <p className="text-gray-700 dark:text-gray-300">
-              @ <a href="https://www.photobuddies.org" target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-primary-400 hover:underline">PhotoBuddies</a>,{' '}
-              <a href="https://tldrnewsletter.cn" target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-primary-400 hover:underline">TLDR Bilingual TechNews</a>
-            </p>
-          </div>
-          <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-            <h3 className="font-semibold text-lg mb-1">Ex-Web Developer Intern</h3>
+            <h3 className="font-semibold text-lg mb-1">Ex-Product Management Intern</h3>
             <p className="text-gray-700 dark:text-gray-300">
               @ <a href="https://dgs.virginia.gov/division-of-consolidated-laboratory-services" target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-primary-400 hover:underline">Virginia Department of General Services</a>
             </p>
@@ -170,29 +229,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 技术栈 */}
-      <section>
-        <h2 className="text-3xl font-bold mb-6">Tech Stack</h2>
-        <div className="flex flex-wrap gap-4 text-4xl">
-          <span title="Python">🐍</span>
-          <span title="JavaScript">📘</span>
-          <span title="Node.js">🟢</span>
-          <span title="MongoDB">🍃</span>
-          <span title="React">⚛️</span>
-          <span title="Docker">🐳</span>
-          <span title="TailwindCSS">💨</span>
-          <span title="Git">📦</span>
-          <span title="Java">☕</span>
-          <span title="Linux">🐧</span>
-          <span title="AWS">☁️</span>
-          <span title="Figma">🎨</span>
-        </div>
-      </section>
+      
 
       {/* Fun Fact */}
       <section className="p-6 bg-primary-50 dark:bg-primary-900/20 rounded-lg">
         <p className="text-gray-700 dark:text-gray-300 italic">
-          Fun fact: I share the same last name with my mom but not my dad!
+          Fun fact: I share the same last name with my mom but not my dad
         </p>
       </section>
     </div>

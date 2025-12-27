@@ -15,10 +15,10 @@ export default function Publications() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-4xl font-bold mb-4">Publications</h1>
-        <p className="text-lg text-gray-700 dark:text-gray-300">
+        <h1 className="text-4xl font-bold mb-4">Research</h1>
+        {/* <p className="text-lg text-gray-700 dark:text-gray-300">
           I don't have any publication yet. But there are two research projects I'm currently working on, which may turn into a publication later.
-        </p>
+        </p> */}
       </div>
 
       <div className="space-y-6">
