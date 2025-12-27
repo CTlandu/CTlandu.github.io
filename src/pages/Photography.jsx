@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import projectsData from '../data/projects.json'
 
 export default function Photography() {
@@ -52,16 +53,19 @@ export default function Photography() {
       {/* 项目网格 */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProjects.map((project) => (
-          <a
+          <Link
             key={project.id}
-            href={`/photography/${project.id}`}
-            className="group block bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden"
+            to={`/photography/${project.id}`}
+            className="group block bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer"
           >
-            <div className="aspect-video overflow-hidden">
+            <div className="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
               <img
                 src={project.thumbnail || project.img}
                 alt={project.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  e.target.style.display = 'none'
+                }}
               />
             </div>
             <div className="p-4">
@@ -76,8 +80,13 @@ export default function Photography() {
                   {project.description}
                 </p>
               )}
+              {project.images && project.images.length > 0 && (
+                <p className="text-xs text-gray-500 dark:text-gray-500 mt-2">
+                  {project.images.length} {project.images.length === 1 ? 'photo' : 'photos'}
+                </p>
+              )}
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>

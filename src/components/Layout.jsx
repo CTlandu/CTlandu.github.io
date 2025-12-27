@@ -42,7 +42,7 @@ export default function Layout({ children }) {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="text-2xl font-bold text-primary-600 dark:text-primary-400">
-              📷 CT
+              📷 Colin Tang
             </Link>
 
             {/* 桌面导航 */}

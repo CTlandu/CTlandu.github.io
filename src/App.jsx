@@ -4,6 +4,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import Photography from './pages/Photography'
+import PhotoGallery from './pages/PhotoGallery'
 import Publications from './pages/Publications'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/photography" element={<Photography />} />
+          <Route path="/photography/:projectId" element={<PhotoGallery />} />
           <Route path="/publications" element={<Publications />} />
         </Routes>
       </Layout>

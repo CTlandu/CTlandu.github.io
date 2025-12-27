@@ -6,16 +6,311 @@
     "category": "Photography",
     "img": "/assets/img/portraits/rooftop/2.jpg",
     "thumbnail": "/assets/img/portraits/rooftop/2.jpg",
-    "importance": 2
+    "importance": 2,
+    "images": [
+      {
+        "src": "/assets/img/portraits/rooftop/2.jpg",
+        "alt": "Rooftop portrait",
+        "caption": "\"Missing Someone on a Typhoon Day\" - Shot in August 2022"
+      },
+      {
+        "src": "/assets/img/portraits/rooftop/3.jpg",
+        "alt": "Rooftop portrait"
+      },
+      {
+        "src": "/assets/img/portraits/rooftop/4.jpg",
+        "alt": "Rooftop portrait"
+      },
+      {
+        "src": "/assets/img/portraits/rooftop/5.jpg",
+        "alt": "Rooftop portrait"
+      },
+      {
+        "src": "/assets/img/portraits/rooftop/6.jpg",
+        "alt": "Rooftop portrait"
+      },
+      {
+        "src": "/assets/img/portraits/rooftop/7.jpg",
+        "alt": "Rooftop portrait"
+      },
+      {
+        "src": "/assets/img/portraits/ah/1.jpg",
+        "alt": "Sunset Loneliness",
+        "caption": "\"Sunset Loneliness\" - Shot in January 2023"
+      },
+      {
+        "src": "/assets/img/portraits/ah/2.jpg",
+        "alt": "Sunset Loneliness"
+      },
+      {
+        "src": "/assets/img/portraits/ah/3.jpg",
+        "alt": "Sunset Loneliness"
+      },
+      {
+        "src": "/assets/img/portraits/ah/4.jpg",
+        "alt": "Sunset Loneliness"
+      },
+      {
+        "src": "/assets/img/portraits/ah/5.jpg",
+        "alt": "Sunset Loneliness"
+      },
+      {
+        "src": "/assets/img/portraits/ah/6.jpg",
+        "alt": "Sunset Loneliness"
+      },
+      {
+        "src": "/assets/img/portraits/ah/7.jpg",
+        "alt": "Sunset Loneliness"
+      },
+      {
+        "src": "/assets/img/portraits/ah/8.jpg",
+        "alt": "Sunset Loneliness"
+      },
+      {
+        "src": "/assets/img/portraits/HK/1.jpg",
+        "alt": "Back to 1990s Hong Kong",
+        "caption": "\"Back to 1990s Hong Kong\" - Shot in July 2022"
+      },
+      {
+        "src": "/assets/img/portraits/HK/2.jpg",
+        "alt": "Back to 1990s Hong Kong"
+      },
+      {
+        "src": "/assets/img/portraits/HK/3.jpg",
+        "alt": "Back to 1990s Hong Kong"
+      },
+      {
+        "src": "/assets/img/portraits/HK/4.jpg",
+        "alt": "Back to 1990s Hong Kong"
+      },
+      {
+        "src": "/assets/img/portraits/HK/5.jpg",
+        "alt": "Back to 1990s Hong Kong"
+      },
+      {
+        "src": "/assets/img/portraits/HK/6.jpg",
+        "alt": "Back to 1990s Hong Kong"
+      },
+      {
+        "src": "/assets/img/portraits/HK/7.jpg",
+        "alt": "Back to 1990s Hong Kong"
+      },
+      {
+        "src": "/assets/img/portraits/HK/8.jpg",
+        "alt": "Back to 1990s Hong Kong"
+      },
+      {
+        "src": "/assets/img/portraits/sea/3.jpg",
+        "alt": "Tethys",
+        "caption": "\"Tethys\" - Shot in March 2023"
+      },
+      {
+        "src": "/assets/img/portraits/sea/1.JPG",
+        "alt": "Tethys"
+      },
+      {
+        "src": "/assets/img/portraits/sea/2.JPG",
+        "alt": "Tethys"
+      },
+      {
+        "src": "/assets/img/portraits/sea/4.jpg",
+        "alt": "Tethys"
+      },
+      {
+        "src": "/assets/img/portraits/sea/5.jpg",
+        "alt": "Tethys"
+      },
+      {
+        "src": "/assets/img/portraits/sis/2.jpg",
+        "alt": "Besties",
+        "caption": "\"Besties\" - Shot in August 2022"
+      },
+      {
+        "src": "/assets/img/portraits/sis/1.jpg",
+        "alt": "Besties"
+      },
+      {
+        "src": "/assets/img/portraits/sis/3.jpg",
+        "alt": "Besties"
+      },
+      {
+        "src": "/assets/img/portraits/sis/4.jpg",
+        "alt": "Besties"
+      },
+      {
+        "src": "/assets/img/portraits/sis/5.jpg",
+        "alt": "Besties"
+      },
+      {
+        "src": "/assets/img/portraits/sis/6.jpg",
+        "alt": "Besties"
+      },
+      {
+        "src": "/assets/img/portraits/sis/7.jpg",
+        "alt": "Besties"
+      },
+      {
+        "src": "/assets/img/portraits/rooftop1/3.jpg",
+        "alt": "Hang out at the rooftop",
+        "caption": "Hang out at the rooftop - Shot in March 2022"
+      },
+      {
+        "src": "/assets/img/portraits/rooftop1/2.jpg",
+        "alt": "Hang out at the rooftop"
+      },
+      {
+        "src": "/assets/img/portraits/rooftop1/4.jpg",
+        "alt": "Hang out at the rooftop"
+      },
+      {
+        "src": "/assets/img/portraits/rooftop1/5.jpg",
+        "alt": "Hang out at the rooftop"
+      },
+      {
+        "src": "/assets/img/portraits/rooftop1/7.jpg",
+        "alt": "Hang out at the rooftop"
+      },
+      {
+        "src": "/assets/img/portraits/hgc/1.jpg",
+        "alt": "The Funeral",
+        "caption": "\"The Funeral\" - Shot in May 2022"
+      },
+      {
+        "src": "/assets/img/portraits/hgc/2.jpg",
+        "alt": "The Funeral"
+      },
+      {
+        "src": "/assets/img/portraits/hgc/3.jpg",
+        "alt": "The Funeral"
+      },
+      {
+        "src": "/assets/img/portraits/hgc/4.jpg",
+        "alt": "The Funeral"
+      },
+      {
+        "src": "/assets/img/portraits/hgc/5.jpg",
+        "alt": "The Funeral"
+      },
+      {
+        "src": "/assets/img/portraits/hgc/6.jpg",
+        "alt": "The Funeral"
+      },
+      {
+        "src": "/assets/img/portraits/xyj/1.jpg",
+        "alt": "Neighborhood Girl",
+        "caption": "\"Neighborhood Girl\" - Shot in August 2023"
+      },
+      {
+        "src": "/assets/img/portraits/xyj/2.jpg",
+        "alt": "Neighborhood Girl"
+      },
+      {
+        "src": "/assets/img/portraits/xyj/3.jpg",
+        "alt": "Neighborhood Girl"
+      },
+      {
+        "src": "/assets/img/portraits/xyj/4.jpg",
+        "alt": "Neighborhood Girl"
+      },
+      {
+        "src": "/assets/img/portraits/xyj/5.jpg",
+        "alt": "Neighborhood Girl"
+      },
+      {
+        "src": "/assets/img/portraits/xyj1/5.jpg",
+        "alt": "City Girl",
+        "caption": "\"City Girl\" - Shot in February 2022"
+      },
+      {
+        "src": "/assets/img/portraits/xyj1/4.jpg",
+        "alt": "City Girl"
+      },
+      {
+        "src": "/assets/img/portraits/xyj1/3.jpg",
+        "alt": "City Girl"
+      },
+      {
+        "src": "/assets/img/portraits/xyj1/1.jpg",
+        "alt": "City Girl"
+      },
+      {
+        "src": "/assets/img/portraits/xyj1/2.jpg",
+        "alt": "City Girl"
+      },
+      {
+        "src": "/assets/img/portraits/zjw/2.jpg",
+        "alt": "Homework MAKE Depression",
+        "caption": "\"Homework MAKE Depression\" - Shot in May 2022"
+      },
+      {
+        "src": "/assets/img/portraits/zjw/3.jpg",
+        "alt": "Homework MAKE Depression"
+      },
+      {
+        "src": "/assets/img/portraits/zjw/4.jpg",
+        "alt": "Homework MAKE Depression"
+      },
+      {
+        "src": "/assets/img/portraits/zjw/5.jpg",
+        "alt": "Homework MAKE Depression"
+      },
+      {
+        "src": "/assets/img/portraits/zjw/6.jpg",
+        "alt": "Homework MAKE Depression"
+      },
+      {
+        "src": "/assets/img/portraits/sisi/1.jpg",
+        "alt": "Chilling in the Woods",
+        "caption": "\"Chilling in the Woods\" - Shot in July 2022"
+      },
+      {
+        "src": "/assets/img/portraits/sisi/2.jpg",
+        "alt": "Chilling in the Woods"
+      },
+      {
+        "src": "/assets/img/portraits/sisi/3.jpg",
+        "alt": "Chilling in the Woods"
+      },
+      {
+        "src": "/assets/img/portraits/sisi/4.jpg",
+        "alt": "Chilling in the Woods"
+      },
+      {
+        "src": "/assets/img/portraits/sisi/5.jpg",
+        "alt": "Chilling in the Woods"
+      }
+    ]
   },
   {
     "id": "contrast",
     "title": "Contrast",
-    "description": "Photography project showcasing contrasts",
+    "description": "Collection of photos showing contrast of many kinds",
     "category": "Photography",
-    "img": "/assets/img/Contrast/1.jpg",
-    "thumbnail": "/assets/img/Contrast/1.jpg",
-    "importance": 1
+    "img": "/assets/img/Contrast/1.JPG",
+    "thumbnail": "/assets/img/Contrast/1.JPG",
+    "importance": 1,
+    "images": [
+      {
+        "src": "/assets/img/Contrast/1.JPG",
+        "alt": "Bicycle Boy"
+      },
+      {
+        "src": "/assets/img/Contrast/2.JPG",
+        "alt": "Bicycle Guy"
+      },
+      {
+        "src": "/assets/img/Contrast/3.jpg",
+        "alt": "Cut-in Light"
+      },
+      {
+        "src": "/assets/img/Contrast/5.jpg",
+        "alt": "Sunset Wedding"
+      },
+      {
+        "src": "/assets/img/Contrast/6.JPG",
+        "alt": "Domino Park"
+      }
+    ]
   },
   {
     "id": "travels",
@@ -24,16 +319,133 @@
     "category": "Photography",
     "img": "/assets/img/Travel/1.JPG",
     "thumbnail": "/assets/img/Travel/1.JPG",
-    "importance": 3
+    "importance": 3,
+    "images": [
+      {
+        "src": "/assets/img/Travel/1.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/2.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/3.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/5.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/6.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/7.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/8.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/9.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/10.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/11.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/12.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/13.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/14.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/15.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/16.jpg",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/17.JPG",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/18.jpg",
+        "alt": "Travel photo"
+      },
+      {
+        "src": "/assets/img/Travel/19.jpg",
+        "alt": "Travel photo"
+      }
+    ]
   },
   {
     "id": "w&m_vid",
     "title": "W&M Video",
     "description": "Video project for William & Mary",
     "category": "Videos",
-    "img": "/assets/img/W&M/1.JPG",
-    "thumbnail": "/assets/img/W&M/1.JPG",
-    "importance": 2
+    "img": "/assets/img/W&M/wren-b.JPG",
+    "thumbnail": "/assets/img/W&M/wren-b.JPG",
+    "youtubeId": "ofn6LAgmGl4",
+    "importance": 2,
+    "images": [
+      {
+        "src": "/assets/img/W&M/arts.JPG",
+        "alt": "W&M Video"
+      },
+      {
+        "src": "/assets/img/W&M/bench.JPG",
+        "alt": "W&M Video"
+      },
+      {
+        "src": "/assets/img/W&M/dupont sign.JPG",
+        "alt": "W&M Video"
+      },
+      {
+        "src": "/assets/img/W&M/Dupont stairs.JPG",
+        "alt": "W&M Video"
+      },
+      {
+        "src": "/assets/img/W&M/stop sign.JPG",
+        "alt": "W&M Video"
+      },
+      {
+        "src": "/assets/img/W&M/sunken.JPG",
+        "alt": "W&M Video"
+      },
+      {
+        "src": "/assets/img/W&M/swem.JPG",
+        "alt": "W&M Video"
+      },
+      {
+        "src": "/assets/img/W&M/W&M sign.JPG",
+        "alt": "W&M Video"
+      },
+      {
+        "src": "/assets/img/W&M/wren-b.JPG",
+        "alt": "W&M Video"
+      },
+      {
+        "src": "/assets/img/W&M/wren-f.JPG",
+        "alt": "W&M Video"
+      }
+    ]
   },
   {
     "id": "outerbanks_vid",
@@ -42,7 +454,61 @@
     "category": "Videos",
     "img": "/assets/img/OBX/1.jpg",
     "thumbnail": "/assets/img/OBX/1.jpg",
-    "importance": 1
+    "youtubeId": "wbsADVjMsFE",
+    "importance": 1,
+    "images": [
+      {
+        "src": "/assets/img/OBX/1.jpg",
+        "alt": "Outer Banks Video"
+      },
+      {
+        "src": "/assets/img/OBX/3.jpg",
+        "alt": "Outer Banks Video"
+      },
+      {
+        "src": "/assets/img/OBX/4.jpg",
+        "alt": "Outer Banks Video"
+      },
+      {
+        "src": "/assets/img/OBX/5.jpg",
+        "alt": "Outer Banks Video"
+      },
+      {
+        "src": "/assets/img/OBX/6.jpg",
+        "alt": "Outer Banks Video"
+      },
+      {
+        "src": "/assets/img/OBX/7.jpg",
+        "alt": "Outer Banks Video"
+      },
+      {
+        "src": "/assets/img/OBX/8.jpg",
+        "alt": "Outer Banks Video"
+      },
+      {
+        "src": "/assets/img/OBX/9.jpg",
+        "alt": "Outer Banks Video"
+      },
+      {
+        "src": "/assets/img/OBX/10.jpg",
+        "alt": "Outer Banks Video"
+      },
+      {
+        "src": "/assets/img/OBX/11.jpg",
+        "alt": "Outer Banks Video"
+      },
+      {
+        "src": "/assets/img/OBX/12.jpg",
+        "alt": "Outer Banks Video"
+      },
+      {
+        "src": "/assets/img/OBX/13.jpg",
+        "alt": "Outer Banks Video"
+      },
+      {
+        "src": "/assets/img/OBX/14.jpg",
+        "alt": "Outer Banks Video"
+      }
+    ]
   }
 ]
-

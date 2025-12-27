@@ -36,7 +36,7 @@ export default function Home() {
           
           <div className="flex flex-wrap gap-4 mb-6">
             <a
-              href="/assets/pdf/Colin_Tang_NG_resume_1-17-2025.pdf"
+              href="/assets/pdf/Colin_Tang_Intern_12.212025.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
