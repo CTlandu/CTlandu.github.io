@@ -10,10 +10,10 @@ export default function Home() {
       <div className="flex flex-col md:flex-row gap-8 items-start">
         <div className="flex-1">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Hi, I'm <span className="text-primary-600 dark:text-primary-400">Colin (Jizhou) Tang</span>
+            Hi, this is <span className="text-primary-600 dark:text-primary-400">Colin Tang</span>
           </h1>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-            Welcome to my personal website! I'm currently a Senior at the{' '}
+            I'm currently a 1st year Master's student at the{' '}
             <a 
               href="https://www.wm.edu/" 
               target="_blank" 
@@ -22,7 +22,16 @@ export default function Home() {
             >
               College of William & Mary
             </a>{' '}
-            pursuing a B.S. in Computer Science and a minor in Arts & Art History.
+            , specializing in {' '}
+            <a 
+              href="https://www.wm.edu/as/mathematics/graduate/cor/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary-600 dark:text-primary-400 hover:underline"
+            >
+              Computational Operations Research
+            </a>{' '}
+            , and I also graduated from W&M with a B.S. in Computer Science and a minor in Arts & Art History.
           </p>
           
           <div className="flex flex-wrap gap-4 mb-6">
