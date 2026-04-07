@@ -100,11 +100,11 @@ export default function Home() {
 
       {/* 项目展示 */}
       <section>
-        <h2 className="text-3xl font-bold mb-6">Projects</h2>
+        <h2 className="text-3xl font-bold mb-6">Projects <span className="text-lg font-normal text-gray-500 dark:text-gray-400">(that actually prove what I can build in the AI era — not just generic internship titles)</span></h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Fav-ly 项目 */}
+          {/* Favly 项目 */}
           <a
-            href="https://www.fav-ly.com"
+            href="https://www.favly.me"
             target="_blank"
             rel="noopener noreferrer"
             className="group block bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer"
@@ -112,7 +112,7 @@ export default function Home() {
             <div className="aspect-video bg-gray-100 dark:bg-gray-700 overflow-hidden">
               <img
                 src="/assets/github_projects/favly_thumbnail.png"
-                alt="Fav-ly"
+                alt="Favly"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 onError={(e) => {
                   e.target.style.display = 'none'
@@ -121,10 +121,10 @@ export default function Home() {
             </div>
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                Fav-ly
+                Favly
               </h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
-                Let someone know you in one click - a perfect dating helper.
+                A link-in-bio for entertainment lovers — showcase everything you enjoy on a single shareable page.
               </p>
               <div className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 text-sm font-medium">
                 View Project <ExternalLink size={14} />
