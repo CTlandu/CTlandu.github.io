@@ -5,50 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="R-oOUaOMLXopsR2YAMHA08kK3bEZz707n6BIYLkF_gs" />
 
-    <title>Colin Tang | Software Developer & Photographer</title>
-    <meta name="description" content="Colin (Jizhou) Tang — Master's student at William & Mary specializing in Computational Operations Research. Software developer, photographer, and creator of Favly and TLDR Bilingual Tech News." />
+    <title>Colin Tang (唐济舟) | Product Engineer & Photographer</title>
+    <meta name="description" content="Colin (Jizhou) Tang — M.S. student in Computational Operations Research at William & Mary. Builds products end to end with AI: Favly, TLDR Bilingual Tech News, and the Wordspace desktop app at Tenth Global." />
     <meta name="author" content="Colin (Jizhou) Tang" />
-    <meta name="keywords" content="Colin Tang, Jizhou Tang, software developer, photographer, William and Mary, Computational Operations Research, Favly, portfolio" />
 
-    <!-- Canonical -->
     <link rel="canonical" href="https://ctlandu.github.io/" />
-
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <meta name="theme-color" content="#9c27b0" />
+    <meta name="theme-color" content="#115740" />
 
-    <!-- Open Graph -->
+    <link rel="preload" as="image" href="/assets/img/portrait.webp" type="image/webp" fetchpriority="high" />
+
+    <script>
+      try {
+        var t = localStorage.getItem('theme')
+        if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark')
+        }
+      } catch (e) {}
+    </script>
+
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Colin Tang | Software Developer & Photographer" />
-    <meta property="og:description" content="Master's student at William & Mary. Software developer, photographer, and creator of Favly and TLDR Bilingual Tech News." />
+    <meta property="og:title" content="Colin Tang | Product Engineer & Photographer" />
+    <meta property="og:description" content="M.S. student at William & Mary. I build products people use — Favly, TLDR Bilingual Tech News, and Wordspace." />
     <meta property="og:url" content="https://ctlandu.github.io/" />
-    <meta property="og:image" content="https://ctlandu.github.io/assets/img/prof_pic_2.jpg" />
+    <meta property="og:image" content="https://ctlandu.github.io/assets/img/portrait.jpg" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Colin Tang" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Colin Tang | Software Developer & Photographer" />
-    <meta name="twitter:description" content="Master's student at William & Mary. Software developer, photographer, and creator of Favly and TLDR Bilingual Tech News." />
-    <meta name="twitter:image" content="https://ctlandu.github.io/assets/img/prof_pic_2.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Colin Tang | Product Engineer & Photographer" />
+    <meta name="twitter:description" content="M.S. student at William & Mary. I build products people use — Favly, TLDR Bilingual Tech News, and Wordspace." />
+    <meta name="twitter:image" content="https://ctlandu.github.io/assets/img/portrait.jpg" />
 
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Colin (Jizhou) Tang",
+      "alternateName": "唐济舟",
       "url": "https://ctlandu.github.io",
-      "jobTitle": "Software Developer",
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "College of William & Mary"
-      },
+      "image": "https://ctlandu.github.io/assets/img/portrait.jpg",
+      "jobTitle": "Product Engineer",
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "College of William & Mary" },
       "sameAs": [
         "https://www.linkedin.com/in/colin-tang-983771180/",
         "https://github.com/CTlandu",
-        "https://www.instagram.com/ctphotography77/"
+        "https://www.instagram.com/ctphotography77/",
+        "https://favly.me",
+        "https://www.tldrnewsletter.cn"
       ]
     }
     </script>

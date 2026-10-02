@@ -24,12 +24,12 @@ dist-ssr
 *.sln
 *.sw?
 
-# Old Jekyll files (if any remain)
-_site
-.jekyll-cache
-.jekyll-metadata
 
 # TypeScript (we're using JavaScript)
 *.ts
 *.tsx
 tsconfig*.json
+
+# Original full-res photos; optimized copies are generated into public/assets/img by `npm run images`
+photos-original/
+.playwright-mcp/

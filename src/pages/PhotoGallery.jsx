@@ -1,213 +1,165 @@
+import { useCallback, useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, X, ChevronLeft, ChevronRight } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { ArrowLeft, X, ChevronLeft, ChevronRight, Play } from 'lucide-react'
 import projectsData from '../data/projects.json'
+import { thumb, thumbSize } from '../lib/images'
+import { useT, ui } from '../lib/i18n'
 
 export default function PhotoGallery() {
+  const t = useT()
   const { projectId } = useParams()
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [isFullscreen, setIsFullscreen] = useState(false)
-
-  // 查找项目数据
-  const project = projectsData.find(p => p.id === projectId)
+  const project = projectsData.find((p) => p.id === projectId)
+  const [open, setOpen] = useState(null)
 
   if (!project) {
     return (
-      <div className="text-center py-12">
-        <h2 className="text-2xl font-bold mb-4">Project not found</h2>
-        <Link to="/photography" className="text-primary-600 dark:text-primary-400 hover:underline">
-          ← Back to Photography
+      <div className="wrap pb-24 pt-32 text-center">
+        <h1 className="font-serif text-3xl font-semibold">{t(ui.notFound)}</h1>
+        <Link to="/photography" className="link-arrow mt-6">
+          <ArrowLeft size={16} /> {t(ui.photography)}
         </Link>
       </div>
     )
   }
 
-  const images = project.images || []
-  const currentImage = images[currentImageIndex] || images[0]
-
-  // 如果没有图片，显示提示
-  if (images.length === 0) {
-    return (
-      <div className="space-y-6">
-        <Link
-          to="/photography"
-          className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-        >
-          <ArrowLeft size={20} />
-          <span>Back to Photography</span>
-        </Link>
-        <div className="text-center py-12">
-          <h2 className="text-2xl font-bold mb-4">No images available</h2>
-          <p className="text-gray-600 dark:text-gray-400">This project doesn't have any images yet.</p>
-        </div>
-      </div>
-    )
-  }
-
-  // 键盘导航
-  useEffect(() => {
-    const handleKeyPress = (e) => {
-      if (isFullscreen) {
-        if (e.key === 'ArrowLeft' && currentImageIndex > 0) {
-          setCurrentImageIndex(currentImageIndex - 1)
-        } else if (e.key === 'ArrowRight' && currentImageIndex < images.length - 1) {
-          setCurrentImageIndex(currentImageIndex + 1)
-        } else if (e.key === 'Escape') {
-          setIsFullscreen(false)
-        }
-      }
-    }
-
-    window.addEventListener('keydown', handleKeyPress)
-    return () => window.removeEventListener('keydown', handleKeyPress)
-  }, [currentImageIndex, images.length, isFullscreen])
-
-  const nextImage = () => {
-    if (currentImageIndex < images.length - 1) {
-      setCurrentImageIndex(currentImageIndex + 1)
-    }
-  }
-
-  const prevImage = () => {
-    if (currentImageIndex > 0) {
-      setCurrentImageIndex(currentImageIndex - 1)
-    }
-  }
+  const images = project.images
 
   return (
-    <div className="space-y-6">
-      {/* 返回按钮 */}
-      <Link
-        to="/photography"
-        className="inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-      >
-        <ArrowLeft size={20} />
-        <span>Back to Photography</span>
+    <div className="wrap pb-24 pt-28 sm:pt-32">
+      <Link to="/photography" className="inline-flex items-center gap-2 text-sm text-ink-2 hover:text-ink">
+        <ArrowLeft size={16} /> {t(ui.photography)}
       </Link>
+      <h1 className="mt-6 font-serif text-5xl font-semibold tracking-[-0.02em] sm:text-6xl">{t(project.title)}</h1>
+      <p className="mt-3 text-lg text-ink-2">
+        {t(project.description)} · {t(ui.photoCount)(images.length)}
+      </p>
 
-      {/* 项目标题 */}
-      <div>
-        <h1 className="text-4xl font-bold mb-2">{project.title}</h1>
-        {project.description && (
-          <p className="text-lg text-gray-600 dark:text-gray-400">{project.description}</p>
-        )}
+      {project.youtubeId && <YouTube id={project.youtubeId} title={t(project.title)} poster={thumb(project.thumbnail)} />}
+
+      <div className="mt-10 columns-1 gap-4 sm:columns-2 lg:columns-3">
+        {images.map((image, i) => (
+          <button
+            key={image.src}
+            type="button"
+            onClick={() => setOpen(i)}
+            className="group relative mb-4 block w-full break-inside-avoid overflow-hidden rounded-xl bg-paper-2 text-left"
+          >
+            <img
+              src={thumb(image.src)}
+              alt={image.alt || `${t(project.title)} ${i + 1}`}
+              {...thumbSize(image.src)}
+              loading={i < 6 ? 'eager' : 'lazy'}
+              decoding="async"
+              className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
+            />
+            {image.caption && (
+              <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent p-4 pt-10 text-sm text-white">
+                {image.caption}
+              </span>
+            )}
+          </button>
+        ))}
       </div>
 
-      {/* YouTube 视频（如果是视频项目） */}
-      {project.youtubeId && (
-        <div className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Video</h2>
-          <div className="aspect-video w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              width="100%"
-              height="100%"
-              src={`https://www.youtube.com/embed/${project.youtubeId}`}
-              title={`${project.title} - YouTube video player`}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className="w-full h-full"
-            ></iframe>
-          </div>
-        </div>
-      )}
+      {open !== null && <Lightbox images={images} index={open} onChange={setOpen} onClose={() => setOpen(null)} />}
+    </div>
+  )
+}
 
-      {/* 照片网格 */}
-      {!isFullscreen && (
-        <div>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-            Click on any image to view in fullscreen. Use arrow keys to navigate.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {images.map((image, index) => (
-              <div
-                key={index}
-                className="group relative aspect-square overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 cursor-pointer border border-gray-200 dark:border-gray-700"
-                onClick={() => {
-                  setCurrentImageIndex(index)
-                  setIsFullscreen(true)
-                }}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt || `${project.title} - Image ${index + 1}`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                  onError={(e) => {
-                    e.target.style.display = 'none'
-                    e.target.parentElement.innerHTML = '<div class="flex items-center justify-center h-full text-gray-400">Image not found</div>'
-                  }}
-                />
-                {image.caption && (
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent text-white p-3 text-sm">
-                    {image.caption}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
+function YouTube({ id, title, poster }) {
+  const [playing, setPlaying] = useState(false)
 
-      {/* 全屏查看模式 */}
-      {isFullscreen && (
-        <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center">
-          {/* 关闭按钮 */}
-          <button
-            onClick={() => setIsFullscreen(false)}
-            className="absolute top-4 right-4 text-white hover:text-gray-300 p-2"
-            aria-label="Close"
-          >
-            <X size={24} />
-          </button>
-
-          {/* 上一张按钮 */}
-          {currentImageIndex > 0 && (
-            <button
-              onClick={prevImage}
-              className="absolute left-4 text-white hover:text-gray-300 p-2"
-              aria-label="Previous"
-            >
-              <ChevronLeft size={32} />
-            </button>
-          )}
-
-          {/* 图片 */}
-          <div className="max-w-7xl mx-auto px-4 flex flex-col items-center">
-            <img
-              src={currentImage?.src}
-              alt={currentImage?.alt || `${project.title} - Image ${currentImageIndex + 1}`}
-              className="max-h-[85vh] max-w-full object-contain rounded-lg"
-              onError={(e) => {
-                e.target.style.display = 'none'
-                e.target.parentElement.innerHTML = '<div class="text-white text-xl">Image not found</div>'
-              }}
-            />
-            {currentImage?.caption && (
-              <div className="mt-4 text-center text-white max-w-3xl">
-                <p className="text-lg font-medium">{currentImage.caption}</p>
-              </div>
-            )}
-          </div>
-
-          {/* 下一张按钮 */}
-          {currentImageIndex < images.length - 1 && (
-            <button
-              onClick={nextImage}
-              className="absolute right-4 text-white hover:text-gray-300 p-2"
-              aria-label="Next"
-            >
-              <ChevronRight size={32} />
-            </button>
-          )}
-
-          {/* 图片计数器 */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm">
-            {currentImageIndex + 1} / {images.length}
-          </div>
-        </div>
+  return (
+    <div className="relative mt-10 aspect-video overflow-hidden rounded-2xl bg-black">
+      {playing ? (
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1`}
+          title={title}
+          allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+          allowFullScreen
+          className="absolute inset-0 h-full w-full"
+        />
+      ) : (
+        <button type="button" onClick={() => setPlaying(true)} className="group absolute inset-0" aria-label={`Play ${title}`}>
+          <img src={poster} alt="" className="h-full w-full object-cover opacity-80 transition-opacity group-hover:opacity-95" />
+          <span className="absolute inset-0 grid place-items-center">
+            <span className="grid h-20 w-20 place-items-center rounded-full bg-cream/95 text-green-deep shadow-xl transition-transform group-hover:scale-105">
+              <Play size={30} fill="currentColor" className="ml-1" />
+            </span>
+          </span>
+        </button>
       )}
     </div>
   )
 }
 
+function Lightbox({ images, index, onChange, onClose }) {
+  const image = images[index]
+  const prev = useCallback(() => index > 0 && onChange(index - 1), [index, onChange])
+  const next = useCallback(() => index < images.length - 1 && onChange(index + 1), [index, images.length, onChange])
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose()
+      if (e.key === 'ArrowLeft') prev()
+      if (e.key === 'ArrowRight') next()
+    }
+    window.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [prev, next, onClose])
+
+  useEffect(() => {
+    const following = images[index + 1]
+    if (following) new Image().src = following.src
+  }, [images, index])
+
+  return (
+    <div className="fixed inset-0 z-[60] flex flex-col bg-black/95 text-white" role="dialog" aria-modal="true" onClick={onClose}>
+      <div className="flex items-center justify-between p-4 text-sm text-white/70">
+        <span>
+          {index + 1} / {images.length}
+        </span>
+        <button type="button" onClick={onClose} aria-label="Close" className="grid h-10 w-10 place-items-center rounded-full hover:bg-white/10">
+          <X size={22} />
+        </button>
+      </div>
+
+      <div className="relative flex min-h-0 flex-1 items-center justify-center px-4 sm:px-16">
+        <img
+          key={image.src}
+          src={image.src}
+          alt={image.alt || ''}
+          onClick={(e) => e.stopPropagation()}
+          className="max-h-full max-w-full object-contain"
+          style={{ backgroundImage: `url("${thumb(image.src)}")`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }}
+        />
+        {index > 0 && (
+          <button
+            type="button"
+            onClick={(e) => (e.stopPropagation(), prev())}
+            aria-label="Previous"
+            className="absolute left-2 grid h-12 w-12 place-items-center rounded-full hover:bg-white/10 sm:left-4"
+          >
+            <ChevronLeft size={30} />
+          </button>
+        )}
+        {index < images.length - 1 && (
+          <button
+            type="button"
+            onClick={(e) => (e.stopPropagation(), next())}
+            aria-label="Next"
+            className="absolute right-2 grid h-12 w-12 place-items-center rounded-full hover:bg-white/10 sm:right-4"
+          >
+            <ChevronRight size={30} />
+          </button>
+        )}
+      </div>
+
+      <p className="min-h-[56px] px-4 py-4 text-center text-[15px] text-white/80">{image.caption}</p>
+    </div>
+  )
+}

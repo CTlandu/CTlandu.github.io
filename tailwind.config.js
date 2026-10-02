@@ -1,27 +1,25 @@
 /** @type {import('tailwindcss').Config} */
+const token = (name) => `rgb(var(--${name}) / <alpha-value>)`
+
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,jsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#f3e5f5',
-          100: '#e1bee7',
-          200: '#ce93d8',
-          300: '#ba68c8',
-          400: '#ab47bc',
-          500: '#9c27b0',
-          600: '#8e24aa',
-          700: '#7b1fa2',
-          800: '#6a1b9a',
-          900: '#4a148c',
-        },
+        paper: { DEFAULT: token('paper'), 2: token('paper-2') },
+        ink: { DEFAULT: token('ink'), 2: token('ink-2'), 3: token('ink-3') },
+        line: token('line'),
+        green: { DEFAULT: token('green'), deep: token('green-deep'), text: token('green-text') },
+        gold: token('gold'),
+        cream: { DEFAULT: token('cream'), 2: token('cream-2') },
       },
+      fontFamily: {
+        serif: ['"Source Serif 4 Variable"', 'Georgia', '"Songti SC"', '"Noto Serif SC"', 'STSong', 'serif'],
+        sans: ['"Geist Variable"', '"PingFang SC"', '"Hiragino Sans GB"', '"Microsoft YaHei"', 'system-ui', 'sans-serif'],
+      },
+      maxWidth: { site: '72rem' },
     },
   },
   plugins: [],
-  darkMode: 'class',
 }

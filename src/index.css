@@ -3,17 +3,88 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --paper: 246 243 235;
+    --paper-2: 237 232 220;
+    --ink: 24 23 20;
+    --ink-2: 87 83 75;
+    --ink-3: 132 127 116;
+    --line: 220 213 198;
+    --green: 17 87 64;
+    --green-deep: 10 52 39;
+    --green-text: 17 87 64;
+    --gold: 185 151 91;
+    --cream: 245 240 226;
+    --cream-2: 196 208 196;
+    color-scheme: light;
+  }
+
+  .dark {
+    --paper: 18 20 18;
+    --paper-2: 27 30 27;
+    --ink: 236 232 222;
+    --ink-2: 172 167 155;
+    --ink-3: 125 121 111;
+    --line: 45 49 45;
+    --green: 14 66 49;
+    --green-deep: 9 38 29;
+    --green-text: 132 196 165;
+    --gold: 205 176 122;
+    color-scheme: dark;
+  }
+
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
-  
+
   body {
-    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+    @apply bg-paper text-ink font-sans antialiased;
+  }
+
+  ::selection {
+    background: rgb(var(--gold) / 0.35);
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--gold));
+    outline-offset: 3px;
+    border-radius: 4px;
   }
 }
 
 @layer components {
-  .container-custom {
-    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  .wrap {
+    @apply mx-auto max-w-site px-4 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply text-[13px] font-medium uppercase tracking-[0.14em] text-green-text;
+  }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 font-medium text-green-text underline-offset-4 hover:underline;
+  }
+}
+
+@layer utilities {
+  .rise {
+    animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    .rise {
+      animation: none;
+    }
   }
 }

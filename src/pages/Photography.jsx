@@ -1,95 +1,84 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { ArrowUpRight, Play } from 'lucide-react'
 import projectsData from '../data/projects.json'
+import { thumb } from '../lib/images'
+import { useT, ui } from '../lib/i18n'
+import { award } from '../data/profile'
+
+const categories = [
+  { key: 'All', label: ui.all },
+  { key: 'Photography', label: ui.photos },
+  { key: 'Videos', label: ui.videos },
+]
 
 export default function Photography() {
-  const [selectedCategory, setSelectedCategory] = useState('All')
-  const categories = ['All', 'Photography', 'Videos']
-
-  const filteredProjects = selectedCategory === 'All' 
-    ? projectsData 
-    : projectsData.filter(project => project.category === selectedCategory)
+  const t = useT()
+  const [category, setCategory] = useState('All')
+  const projects = category === 'All' ? projectsData : projectsData.filter((p) => p.category === category)
 
   return (
-    <div className="space-y-8">
-      <div>
-        <h1 className="text-4xl font-bold mb-4">Photography</h1>
-        <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-          A collection of some of my photography & video works
-        </p>
-        
-        <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg mb-8">
-          <p className="text-gray-700 dark:text-gray-300">
-            <span className="font-semibold">🎉 Recent photography award:</span>{' '}
-            <a 
-              href="https://www.instagram.com/p/C_twhg3oUM2/?igsh=MWt5MjVlMmJlbmZuNA==" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary-600 dark:text-primary-400 hover:underline"
-            >
-              Winner of AAP Magazine 41 B&W
-            </a>
-          </p>
+    <div className="wrap pb-24 pt-28 sm:pt-32">
+      <div className="flex flex-wrap items-end justify-between gap-4">
+        <h1 className="font-serif text-5xl font-semibold tracking-[-0.02em] sm:text-6xl">{t(ui.photography)}</h1>
+        <div>
+          <a
+            href={award.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 rounded-full border border-gold/60 py-2 pl-2 pr-4"
+          >
+            <span className="grid h-8 w-8 place-items-center rounded-full bg-gold/15 text-gold">★</span>
+            <span className="text-[15px] group-hover:text-green-text">{t(award.label)}</span>
+            <ArrowUpRight size={15} className="text-ink-3" />
+          </a>
         </div>
       </div>
 
-      {/* 分类筛选 */}
-      <div className="flex gap-2 flex-wrap">
-        {categories.map((category) => (
+      <div className="mt-12 flex gap-2" role="tablist">
+        {categories.map((c) => (
           <button
-            key={category}
-            onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-lg transition-colors ${
-              selectedCategory === category
-                ? 'bg-primary-600 text-white'
-                : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+            key={c.key}
+            type="button"
+            role="tab"
+            aria-selected={category === c.key}
+            onClick={() => setCategory(c.key)}
+            className={`rounded-full px-4 py-2 text-sm transition-colors ${
+              category === c.key ? 'bg-ink text-paper' : 'bg-paper-2 text-ink-2 hover:text-ink'
             }`}
           >
-            {category}
+            {t(c.label)}
           </button>
         ))}
       </div>
 
-      {/* 项目网格 */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProjects.map((project) => (
-          <Link
-            key={project.id}
-            to={`/photography/${project.id}`}
-            className="group block bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer"
-          >
-            <div className="aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
+      <div className="mt-8 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map((p, i) => (
+          <Link key={p.id} to={`/photography/${encodeURIComponent(p.id)}`} className="group block">
+            <div className="relative overflow-hidden rounded-2xl bg-paper-2">
               <img
-                src={project.thumbnail || project.img}
-                alt={project.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                onError={(e) => {
-                  e.target.style.display = 'none'
-                }}
+                src={thumb(p.thumbnail)}
+                alt={t(p.title)}
+                width="800"
+                height="600"
+                loading={i < 3 ? 'eager' : 'lazy'}
+                decoding="async"
+                className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
-            </div>
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                {project.title}
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                {project.category}
-              </p>
-              {project.description && (
-                <p className="text-gray-700 dark:text-gray-300 text-sm line-clamp-2">
-                  {project.description}
-                </p>
-              )}
-              {project.images && project.images.length > 0 && (
-                <p className="text-xs text-gray-500 dark:text-gray-500 mt-2">
-                  {project.images.length} {project.images.length === 1 ? 'photo' : 'photos'}
-                </p>
+              {p.youtubeId && (
+                <span className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-black/55 px-3 py-1 text-xs text-white backdrop-blur">
+                  <Play size={12} fill="currentColor" /> {t(ui.film)}
+                </span>
               )}
             </div>
+            <div className="mt-4 flex items-baseline justify-between gap-4">
+              <h2 className="font-serif text-2xl font-semibold tracking-tight group-hover:text-green-text">{t(p.title)}</h2>
+              <span className="flex-none text-sm text-ink-3">{t(ui.photoCount)(p.images.length)}</span>
+            </div>
+            <p className="mt-1 text-[15px] text-ink-2">{t(p.description)}</p>
           </Link>
         ))}
       </div>
     </div>
   )
 }
-

@@ -1,26 +1,31 @@
-// 使用 HashRouter 以避免 GitHub Pages 路由问题
-// 如果使用 BrowserRouter，需要配置 404.html 重定向
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+// HashRouter: GitHub Pages has no server-side rewrites, so deep links live after the '#'.
+import { lazy, Suspense } from 'react'
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
-import Photography from './pages/Photography'
-import PhotoGallery from './pages/PhotoGallery'
-import Publications from './pages/Publications'
+import { LangProvider } from './lib/i18n'
 
-function App() {
+const Photography = lazy(() => import('./pages/Photography'))
+const PhotoGallery = lazy(() => import('./pages/PhotoGallery'))
+const Archive = lazy(() => import('./pages/Archive'))
+
+export default function App() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/photography" element={<Photography />} />
-          <Route path="/photography/:projectId" element={<PhotoGallery />} />
-          <Route path="/publications" element={<Publications />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <LangProvider>
+      <Router>
+        <Layout>
+          <Suspense fallback={<div className="min-h-screen" />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/photography" element={<Photography />} />
+              <Route path="/photography/:projectId" element={<PhotoGallery />} />
+              <Route path="/archive" element={<Archive />} />
+              <Route path="/publications" element={<Navigate to="/" state={{ scrollTo: 'research' }} replace />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </Suspense>
+        </Layout>
+      </Router>
+    </LangProvider>
   )
 }
-
-export default App
-

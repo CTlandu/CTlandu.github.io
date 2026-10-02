@@ -1,243 +1,294 @@
 import { Link } from 'react-router-dom'
-import { Mail, Phone, Instagram, Linkedin, Github, ExternalLink } from 'lucide-react'
-// 图片应该放在 public 目录下，直接使用路径引用
-const profilePic = '/assets/img/prof_pic_2.jpg'
+import { ArrowRight, ArrowUpRight, Github, Linkedin, Instagram, Mail } from 'lucide-react'
+import { contact, hero, featured, work, experience, education, research, award, photoStrip } from '../data/profile'
+import { useLang, useT, ui } from '../lib/i18n'
+import { useScrollToRequestedSection } from '../lib/useSectionNav'
+import { thumb } from '../lib/thumb'
 
 export default function Home() {
+  useScrollToRequestedSection()
+
   return (
-    <div className="space-y-12">
-      {/* 简介部分 */}
-      <div className="flex flex-col md:flex-row gap-8 items-start">
-        <div className="flex-1">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Hi, this is <span className="text-primary-600 dark:text-primary-400">Colin Tang</span>
-          </h1>
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-            I'm currently a 1st year Master's student at the{' '}
-            <a 
-              href="https://www.wm.edu/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary-600 dark:text-primary-400 hover:underline"
-            >
-              College of William & Mary
-            </a>{' '}
-            with full scholarship and TA assistantship, specializing in {' '}
-            <a 
-              href="https://www.wm.edu/as/mathematics/graduate/cor/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary-600 dark:text-primary-400 hover:underline"
-            >
-              Computational Operations Research
-            </a>{' '}
-            , and I also graduated from W&M with a B.S. in Computer Science and a minor in Arts & Art History.
-          </p>
-          
-          <div className="flex flex-wrap gap-4 mb-6">
-            <a
-              href="/assets/pdf/Colin_Tang_Intern_12.212025.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
-            >
-              View Resume <ExternalLink size={16} />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/colin-tang-983771180/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            >
-              <Linkedin size={16} /> LinkedIn
-            </a>
-            <a
-              href="https://github.com/CTlandu"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-            >
-              <Github size={16} /> GitHub
-            </a>
-          </div>
-
-          <p className="text-gray-600 dark:text-gray-400 mb-4">
-            I'm currently looking for a position in the field of Product Management or Software Development.
-          </p>
-        </div>
-
-        <div className="md:w-48 flex-shrink-0">
-          <img
-            src={profilePic}
-            alt="Colin Tang"
-            className="rounded-lg shadow-lg w-full max-h-64 object-cover"
-          />
-          <div className="mt-3 space-y-1.5 text-sm">
-            <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-              <Phone size={16} />
-              <span>757-332-3947</span>
-            </div>
-            <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-              <Mail size={16} />
-              <a href="mailto:jizhoutang@outlook.com" className="hover:text-primary-600 dark:hover:text-primary-400">
-                jizhoutang@outlook.com
-              </a>
-            </div>
-            <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-              <Instagram size={16} />
-              <a 
-                href="https://www.instagram.com/ctphotography77/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-primary-600 dark:hover:text-primary-400"
-              >
-                @ctphotography77
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 项目展示 */}
-      <section>
-        <h2 className="text-3xl font-bold mb-6">Projects <span className="text-lg font-normal text-gray-500 dark:text-gray-400">(that actually prove what I can build in the AI era — not just generic internship titles)</span></h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Favly 项目 */}
-          <a
-            href="https://www.favly.me"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer"
-          >
-            <div className="aspect-video bg-gray-100 dark:bg-gray-700 overflow-hidden">
-              <img
-                src="/assets/github_projects/favly_thumbnail.png"
-                alt="Favly"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                onError={(e) => {
-                  e.target.style.display = 'none'
-                }}
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                Favly
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
-                A link-in-bio for entertainment lovers — showcase everything you enjoy on a single shareable page.
-              </p>
-              <div className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 text-sm font-medium">
-                View Project <ExternalLink size={14} />
-              </div>
-            </div>
-          </a>
-
-          {/* TLDR Bilingual 项目 */}
-          <a
-            href="https://tldrnewsletter.cn"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer"
-          >
-            <div className="aspect-video bg-gray-100 dark:bg-gray-700 overflow-hidden">
-              <img
-                src="/assets/github_projects/tldr_thumbnail.png"
-                alt="TLDR Bilingual TechNews"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                onError={(e) => {
-                  e.target.style.display = 'none'
-                }}
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                TLDR Bilingual Tech News
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">
-                Delivering the latest tech news in both Chinese and English
-              </p>
-              <div className="inline-flex items-center gap-2 text-primary-600 dark:text-primary-400 text-sm font-medium">
-                Visit Website <ExternalLink size={14} />
-              </div>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      {/* 技术经验 */}
-      <section>
-        <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-          <span className="text-2xl">💻</span> Internship Experience
-        </h2>
-        <div className="space-y-4">
-          <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-            <h3 className="font-semibold text-lg mb-1">Ex-Software Development Intern</h3>
-            <p className="text-gray-700 dark:text-gray-300">
-              @ <a href="https://waveformai.wm.edu/" target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-primary-400 hover:underline">Waveform.ai</a>
-            </p>
-          </div>
-          <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-            <h3 className="font-semibold text-lg mb-1">Ex-Product Management Intern</h3>
-            <p className="text-gray-700 dark:text-gray-300">
-              @ <a href="https://dgs.virginia.gov/division-of-consolidated-laboratory-services" target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-primary-400 hover:underline">Virginia Department of General Services</a>
-            </p>
-          </div>
-          <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-            <h3 className="font-semibold text-lg mb-1">Ex-Software Engineering Intern</h3>
-            <p className="text-gray-700 dark:text-gray-300">
-              @ <a href="https://www.saicmotor.com/english/index.shtml" target="_blank" rel="noopener noreferrer" className="text-primary-600 dark:text-primary-400 hover:underline">SAIC Motor (Shanghai)</a>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 其他兴趣 */}
-      <section>
-        <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">
-          <span className="text-2xl">❤️</span> Besides Coding
-        </h2>
-        <p className="text-gray-700 dark:text-gray-300 mb-4">
-          I'm also a photographer and video creator. I like playing pickleball, snowboarding, swimming, gyming, and hiking in my free time.
-        </p>
-        <p className="text-gray-700 dark:text-gray-300 mb-4">
-          For Photography Works, please see{' '}
-          <Link to="/photography" className="text-primary-600 dark:text-primary-400 hover:underline">
-            Photography
-          </Link>{' '}
-          or my{' '}
-          <a 
-            href="https://www.instagram.com/ctphotography77/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-primary-600 dark:text-primary-400 hover:underline"
-          >
-            Instagram Page
-          </a>
-        </p>
-        <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
-          <p className="text-gray-700 dark:text-gray-300">
-            <span className="font-semibold">🎉 Recent photography award:</span>{' '}
-            <a 
-              href="https://www.instagram.com/p/C_twhg3oUM2/?igsh=MWt5MjVlMmJlbmZuNA==" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary-600 dark:text-primary-400 hover:underline"
-            >
-              Winner of AAP Magazine 41 B&W
-            </a>
-          </p>
-        </div>
-      </section>
-
-      
-
-      {/* Fun Fact */}
-      <section className="p-6 bg-primary-50 dark:bg-primary-900/20 rounded-lg">
-        <p className="text-gray-700 dark:text-gray-300 italic">
-          Fun fact: I share the same last name with my mom but not my dad
-        </p>
-      </section>
-    </div>
+    <>
+      <Hero />
+      <Work />
+      <Experience />
+      <Research />
+      <Photography />
+    </>
   )
 }
 
+function Hero() {
+  const t = useT()
+  const { lang } = useLang()
+  const socials = [
+    { href: contact.github, label: 'GitHub', Icon: Github },
+    { href: contact.linkedin, label: 'LinkedIn', Icon: Linkedin },
+    { href: contact.instagram, label: 'Instagram', Icon: Instagram },
+    { href: `mailto:${contact.email}`, label: 'Email', Icon: Mail },
+  ]
+
+  return (
+    <section className="bg-green text-cream">
+      <div className="wrap grid items-center gap-12 pb-16 pt-28 sm:pt-32 lg:grid-cols-12 lg:gap-8 lg:pb-24">
+        <div className="lg:col-span-7">
+          <h1
+            className={`rise font-serif font-semibold leading-none ${
+              lang === 'zh' ? 'text-[40px] sm:text-6xl lg:text-[64px]' : 'text-[56px] tracking-[-0.02em] sm:text-7xl lg:text-[88px]'
+            }`}
+          >
+            {t(hero.title)}
+          </h1>
+          <p className="rise mt-7 max-w-lg text-lg leading-relaxed text-cream/80 sm:text-[19px]" style={{ animationDelay: '80ms' }}>
+            {t(hero.intro)}
+          </p>
+
+          <div className="rise mt-9 flex flex-wrap items-center gap-3" style={{ animationDelay: '160ms' }}>
+            <a
+              href={t(contact.resume)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-cream px-5 py-3 font-medium text-green-deep transition-colors hover:bg-white"
+            >
+              {t(ui.resume)} <ArrowUpRight size={17} />
+            </a>
+            {socials.map(({ href, label, Icon }) => (
+              <a
+                key={label}
+                href={href}
+                target={href.startsWith('mailto') ? undefined : '_blank'}
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="grid h-11 w-11 place-items-center rounded-full border border-cream/25 text-cream/80 transition-colors hover:border-cream/60 hover:text-cream"
+              >
+                <Icon size={18} />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="rise lg:col-span-5" style={{ animationDelay: '80ms' }}>
+          <figure className="mx-auto max-w-[280px] sm:max-w-[340px] lg:ml-auto lg:mr-0">
+            <div className="relative">
+              <div className="absolute -bottom-4 -right-4 h-full w-full rounded-[28px] border border-gold/70" aria-hidden />
+              <img
+                src="/assets/img/portrait.webp"
+                alt="Portrait of Colin Tang"
+                width="720"
+                height="836"
+                fetchpriority="high"
+                className="relative aspect-[1120/1300] w-full rounded-[28px] object-cover shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)]"
+              />
+            </div>
+            <figcaption className="mt-8 flex items-center gap-2 text-sm text-cream/70">
+              <span className="h-2 w-2 rounded-full bg-gold" />
+              {t(hero.status)}
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function SectionTitle({ children }) {
+  return <h2 className="font-serif text-4xl font-semibold tracking-[-0.015em] sm:text-5xl">{children}</h2>
+}
+
+function ExternalLink({ href, children, onDark }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex items-center gap-1.5 font-medium underline-offset-4 hover:underline ${
+        onDark ? 'text-cream' : 'text-green-text'
+      }`}
+    >
+      {children} <ArrowUpRight size={16} />
+    </a>
+  )
+}
+
+function Work() {
+  const t = useT()
+  return (
+    <section className="wrap scroll-mt-16 py-20 sm:py-28" id="work">
+      <SectionTitle>{t(ui.work)}</SectionTitle>
+
+      <article className="mt-10 grid overflow-hidden rounded-[24px] border border-line lg:grid-cols-12">
+        <a
+          href={featured.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block overflow-hidden bg-paper-2 lg:col-span-7"
+          aria-label={`${featured.name} — ${featured.linkLabel}`}
+        >
+          <img
+            src={featured.image}
+            srcSet={`${thumb(featured.image)} 800w, ${featured.image} 1424w`}
+            sizes="(min-width: 1024px) 640px, 100vw"
+            alt="Favly homepage"
+            width="1424"
+            height="801"
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+          />
+        </a>
+        <div className="flex flex-col justify-center gap-4 bg-green p-8 text-cream sm:p-10 lg:col-span-5">
+          <p className="text-sm text-cream/60">{t(featured.kind)}</p>
+          <h3 className="font-serif text-4xl font-semibold tracking-tight">{featured.name}</h3>
+          <p className="text-[17px] leading-relaxed text-cream/85">{t(featured.summary)}</p>
+          <p className="text-[15px] text-cream/60">{t(featured.note)}</p>
+          <div className="pt-2">
+            <ExternalLink href={featured.href} onDark>
+              {featured.linkLabel}
+            </ExternalLink>
+          </div>
+        </div>
+      </article>
+
+      <div className="mt-6 grid gap-6 md:grid-cols-2">
+        {work.map((p) => (
+          <article key={p.href} className="flex flex-col overflow-hidden rounded-[24px] border border-line">
+            <img
+              src={thumb(p.image)}
+              alt={`${t(p.name)} homepage`}
+              width="800"
+              height="450"
+              loading="lazy"
+              decoding="async"
+              className="aspect-[16/9] w-full border-b border-line object-cover object-top"
+            />
+            <div className="flex flex-1 flex-col gap-3 p-7 sm:p-8">
+              <p className="text-sm text-ink-3">{t(p.kind)}</p>
+              <h3 className="font-serif text-[28px] font-semibold leading-tight tracking-tight">{t(p.name)}</h3>
+              <p className="text-[16px] leading-relaxed text-ink-2">{t(p.summary)}</p>
+              <div className="mt-auto pt-2">
+                <ExternalLink href={p.href}>{p.linkLabel}</ExternalLink>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function Experience() {
+  const t = useT()
+  return (
+    <section className="border-t border-line">
+      <div className="wrap scroll-mt-16 py-20 sm:py-28" id="experience">
+        <SectionTitle>{t(ui.experience)}</SectionTitle>
+        <ol className="mt-10">
+          {experience.map((job) => (
+            <li key={job.href} className="grid gap-1 border-t border-line py-6 md:grid-cols-12 md:gap-8">
+              <p className="text-sm text-ink-3 md:col-span-3 md:pt-1.5">{t(job.date)}</p>
+              <div className="md:col-span-9">
+                <h3 className="font-serif text-[22px] font-semibold tracking-tight">
+                  <a href={job.href} target="_blank" rel="noopener noreferrer" className="hover:text-green-text">
+                    {t(job.org)}
+                  </a>
+                  <span className="font-normal text-ink-2"> · {t(job.role)}</span>
+                </h3>
+                {job.note && <p className="mt-1 text-[16px] text-ink-2">{t(job.note)}</p>}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  )
+}
+
+function Research() {
+  const t = useT()
+  const block = (title, items) => (
+    <div>
+      <p className="eyebrow">{title}</p>
+      <ul className="mt-5">
+        {items.map((it) => (
+          <li key={it.title + it.sub} className="border-t border-line py-5">
+            <h3 className="font-serif text-xl font-semibold leading-snug">
+              {it.href ? (
+                <a href={it.href} target="_blank" rel="noopener noreferrer" className="hover:text-green-text">
+                  {it.title}
+                  <ArrowUpRight size={16} className="ml-1 inline align-baseline text-ink-3" />
+                </a>
+              ) : (
+                it.title
+              )}
+            </h3>
+            <p className="mt-1 text-ink-2">{it.sub}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+
+  return (
+    <section className="border-t border-line">
+      <div className="wrap grid scroll-mt-16 gap-14 py-20 sm:py-28 lg:grid-cols-2" id="research">
+        {block(
+          t(ui.education),
+          education.map((e) => ({ title: t(e.school), sub: `${t(e.degree)} · ${e.date}` })),
+        )}
+        {block(
+          t(ui.research),
+          research.map((r) => ({ title: t(r.title), href: r.href, sub: t(r.who) })),
+        )}
+      </div>
+    </section>
+  )
+}
+
+function Photography() {
+  const t = useT()
+  return (
+    <section className="bg-paper-2">
+      <div className="wrap py-20 sm:py-28">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <SectionTitle>{t(ui.photography)}</SectionTitle>
+          <a
+            href={award.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[15px] text-ink-2 hover:text-green-text"
+          >
+            <span className="text-gold">★</span> {t(award.label)}
+          </a>
+        </div>
+
+        <div className="-mx-4 mt-10 flex snap-x gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-5 sm:overflow-visible sm:px-0">
+          {photoStrip.map((p) => (
+            <Link
+              key={p.src}
+              to={p.to}
+              className="group block w-[62%] flex-none snap-start overflow-hidden rounded-2xl bg-line sm:w-auto"
+            >
+              <img
+                src={thumb(p.src)}
+                alt={p.alt}
+                width="800"
+                height="1067"
+                loading="lazy"
+                decoding="async"
+                className="aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+          <Link to="/photography" className="link-arrow">
+            {t(ui.seeAll)} <ArrowRight size={16} />
+          </Link>
+          <ExternalLink href={contact.instagram}>@ctphotography77</ExternalLink>
+        </div>
+      </div>
+    </section>
+  )
+}
