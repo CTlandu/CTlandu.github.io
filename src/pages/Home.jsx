@@ -13,8 +13,8 @@ export default function Home() {
     <>
       <Hero />
       <Work />
-      <Posts />
       <Experience />
+      <Posts />
       <Research />
       <Photography />
     </>
@@ -201,7 +201,7 @@ function Posts() {
           <SectionTitle>{t(ui.posts)}</SectionTitle>
           <ExternalLink href={`${contact.linkedin}recent-activity/all/`}>{t(ui.allOnLinkedIn)}</ExternalLink>
         </div>
-        <div className={`mt-10 elfsight-app-${linkedinFeed.elfsightId}`} data-elfsight-app-lazy />
+        <div className={`mt-10 dark:brightness-[.8] elfsight-app-${linkedinFeed.elfsightId}`} data-elfsight-app-lazy />
       </div>
     </section>
   )
