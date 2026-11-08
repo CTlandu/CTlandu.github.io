@@ -1,6 +1,7 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, ArrowUpRight, Github, Linkedin, Instagram, Mail } from 'lucide-react'
-import { contact, hero, featured, work, experience, education, research, award, photoStrip } from '../data/profile'
+import { contact, linkedinFeed, hero, featured, work, experience, education, research, award, photoStrip } from '../data/profile'
 import { useLang, useT, ui } from '../lib/i18n'
 import { useScrollToRequestedSection } from '../lib/useSectionNav'
 import { thumb } from '../lib/thumb'
@@ -12,6 +13,7 @@ export default function Home() {
     <>
       <Hero />
       <Work />
+      <Posts />
       <Experience />
       <Research />
       <Photography />
@@ -172,6 +174,34 @@ function Work() {
             </div>
           </article>
         ))}
+      </div>
+    </section>
+  )
+}
+
+const ELFSIGHT_SRC = 'https://elfsightcdn.com/platform.js'
+
+function Posts() {
+  const t = useT()
+
+  useEffect(() => {
+    if (!linkedinFeed.elfsightId || document.querySelector(`script[src="${ELFSIGHT_SRC}"]`)) return
+    const script = document.createElement('script')
+    script.src = ELFSIGHT_SRC
+    script.async = true
+    document.body.appendChild(script)
+  }, [])
+
+  if (!linkedinFeed.elfsightId) return null
+
+  return (
+    <section className="border-t border-line">
+      <div className="wrap scroll-mt-16 py-20 sm:py-28" id="posts">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <SectionTitle>{t(ui.posts)}</SectionTitle>
+          <ExternalLink href={`${contact.linkedin}recent-activity/all/`}>{t(ui.allOnLinkedIn)}</ExternalLink>
+        </div>
+        <div className={`mt-10 elfsight-app-${linkedinFeed.elfsightId}`} data-elfsight-app-lazy />
       </div>
     </section>
   )

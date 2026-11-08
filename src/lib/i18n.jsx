@@ -37,6 +37,8 @@ export function useT() {
 export const ui = {
   work: { en: 'Work', zh: '作品' },
   experience: { en: 'Experience', zh: '经历' },
+  posts: { en: 'Posts', zh: '动态' },
+  allOnLinkedIn: { en: 'All on LinkedIn', zh: '在 LinkedIn 查看全部' },
   research: { en: 'Research', zh: '研究' },
   education: { en: 'Education', zh: '教育' },
   photography: { en: 'Photography', zh: '摄影' },

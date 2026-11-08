@@ -10,6 +10,9 @@ export const contact = {
   },
 }
 
+// Elfsight LinkedIn feed widget id (the part after "elfsight-app-" in its embed code). Empty hides the section.
+export const linkedinFeed = { elfsightId: '2e47de2d-533e-44d0-b244-c2b8b870603c' }
+
 export const hero = {
   title: { en: 'Hi, I’m Colin.', zh: '你好，我是唐济舟。' },
   intro: {
