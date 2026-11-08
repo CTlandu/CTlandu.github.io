@@ -76,7 +76,7 @@ function Hero() {
               <div className="absolute -bottom-4 -right-4 h-full w-full rounded-[28px] border border-gold/70" aria-hidden />
               <img
                 src="/assets/img/portrait.webp"
-                alt="Portrait of Colin Tang"
+                alt="Colin Tang pitching Favly at the W&M Entrepreneurship Hub"
                 width="720"
                 height="836"
                 fetchpriority="high"

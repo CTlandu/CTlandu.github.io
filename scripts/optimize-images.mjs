@@ -51,8 +51,8 @@ for await (const file of walk(SRC)) {
 
 await writeFile('src/data/image-sizes.json', JSON.stringify(sizes, Object.keys(sizes).sort(), 0) + '\n')
 
-// Portrait: crop out the upscaler watermark in the bottom-left corner.
-const portrait = sharp(path.join(SRC, 'prof_pic_2.jpg')).extract({ left: 112, top: 140, width: 1120, height: 1300 })
+// Portrait: pitching Favly at the W&M Entrepreneurship Hub (photo by Ella Hage), cropped to the hero's 1120:1300 frame.
+const portrait = sharp(path.join(SRC, 'pitch-ehub.jpg')).rotate().extract({ left: 1433, top: 600, width: 2352, height: 2729 })
 await portrait.clone().resize({ width: 720 }).webp({ quality: 80 }).toFile(path.join(OUT, 'portrait.webp'))
 await portrait.clone().resize({ width: 720 }).jpeg({ quality: 82, mozjpeg: true }).toFile(path.join(OUT, 'portrait.jpg'))
 
